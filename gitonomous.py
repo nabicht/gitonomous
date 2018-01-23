@@ -1,5 +1,5 @@
 
-# Metonomous
+# Gitnomous
 # meta data of a project
 #  +
 # acting independently or having the freedom to do so
@@ -36,8 +36,7 @@ Flexability is important:
      stuff
 """
 
-# TODO I don't know what my object model looks like or if I even need one so I'm
- just going to start coding and see what functionality demands
+# TODO I don't know what my object model looks like or if I even need one so I'm just going to start coding and see what functionality demands
 
 import errno
 import os
@@ -109,3 +108,4 @@ def create(directory, project_name, modules):
 
 
     # TODO make the example data in the module
+    s`
