@@ -43,7 +43,7 @@ import os
 import os.path
 import datetime.datetime
 
-class DevLog:
+class DevLogModule:
 
     REQUIRED_FIELDS = {'timestamp', 'body'}
     OPTIONAL_FIELDS = {'title','author', 'tags'}
@@ -67,7 +67,7 @@ class DevLog:
     # TODO do I want to validate data fields? like timestmap to make sure type is right?
     def validate(data): return REQUIRED_FIELDS <= set(data)
 
-class Tasks:
+class TasksModule:
 
     REQUIRED_FIELDS = {'name', 'description', 'type'}
     OPTIONAL_FIELDS = {'due_date', 'comments', 'status', 'tags', 'reporter', 'assigned'}
@@ -76,7 +76,7 @@ class Tasks:
 
     def validate(data): return REQUIRED_FIELDS <= set(data)
 
-class Docs:
+class DocsModule:
     def dir(): return "docs"
 
 MODULES = {DevLog, Tasks, Docs}
@@ -98,14 +98,14 @@ def create(directory, project_name, modules):
 
     # make the structure of the project sub directories
     os.mkdir(os.path.join(project_dir, "src"))
-    meto_dir = os.path.join(project_dir, "metonomous")
-    os.mkdir(meto_dir)
+    gito_dir = os.path.join(project_dir, "gitonomous")
+    os.mkdir(gito_dir)
 
     # TODO this seams like somethign that could be automated with module objects
     # make the module directories
     for module in MODULES:
-        os.mkdir(os.path.join(meto_dir, module.dir()))
+        os.mkdir(os.path.join(gito_dir, module.dir()))
 
 
     # TODO make the example data in the module
-    s`
+    
