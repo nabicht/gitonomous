@@ -61,8 +61,10 @@ class DevLogModule:
                       }
         all_options = {'timestamp': datetime.datetime.now(),
                        'title': 'All the options',
-                       'body': "There are ."
-                       }
+                       'body': "There are different optional key/value pairs you can use: tags and author. For tags you can use anything other than a comma, but it makes sense to keep it clean by sticking to alphanumercis and spaces.",
+                       'tags': ['example', 'documentation'],
+                       'author': 'Peter Nabicht'
+                      }
 
     # TODO do I want to validate data fields? like timestmap to make sure type is right?
     def validate(data): return REQUIRED_FIELDS <= set(data)
